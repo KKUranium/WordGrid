@@ -14,6 +14,15 @@
 		6BEF34F92306AA2D00F018EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF34F72306AA2D00F018EC /* LaunchScreen.storyboard */; };
 		6BEF35042306AA2D00F018EC /* WordGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF35032306AA2D00F018EC /* WordGridTests.swift */; };
 		6BEF350F2306AA2D00F018EC /* WordGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF350E2306AA2D00F018EC /* WordGridUITests.swift */; };
+		6BEF352323074BCC00F018EC /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF352223074BCC00F018EC /* GridViewModel.swift */; };
+		6BEF352623075E5300F018EC /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF352523075E5300F018EC /* GridView.swift */; };
+		6BEF352A2309894400F018EC /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF35292309894400F018EC /* GridCell.swift */; };
+		6BEF352C2309895700F018EC /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF352B2309895700F018EC /* GridCell.xib */; };
+		6BEF352E2309A8F900F018EC /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF352D2309A8F900F018EC /* NibLoader.swift */; };
+		6BEF35302309AEBA00F018EC /* Grid.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF352F2309AEBA00F018EC /* Grid.json */; };
+		6BEF35322309AF8800F018EC /* GridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF35312309AF8800F018EC /* GridModel.swift */; };
+		6BEF35342309BA0C00F018EC /* DataOperationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF35332309BA0C00F018EC /* DataOperationHelper.swift */; };
+		6BEF35362309BE5B00F018EC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF35352309BE5B00F018EC /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		6BEF350A2306AA2D00F018EC /* WordGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEF350E2306AA2D00F018EC /* WordGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGridUITests.swift; sourceTree = "<group>"; };
 		6BEF35102306AA2D00F018EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BEF352223074BCC00F018EC /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		6BEF352523075E5300F018EC /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		6BEF35292309894400F018EC /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		6BEF352B2309895700F018EC /* GridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
+		6BEF352D2309A8F900F018EC /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
+		6BEF352F2309AEBA00F018EC /* Grid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Grid.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		6BEF35312309AF8800F018EC /* GridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModel.swift; sourceTree = "<group>"; };
+		6BEF35332309BA0C00F018EC /* DataOperationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOperationHelper.swift; sourceTree = "<group>"; };
+		6BEF35352309BE5B00F018EC /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +115,11 @@
 		6BEF34ED2306AA2A00F018EC /* WordGrid */ = {
 			isa = PBXGroup;
 			children = (
+				6BEF351E2306AA9C00F018EC /* PlatformLayer */,
+				6BEF351D2306AA8100F018EC /* PresentationLayer */,
+				6BEF351C2306AA5C00F018EC /* DomainLayer */,
 				6BEF34EE2306AA2A00F018EC /* AppDelegate.swift */,
+				6BEF352F2309AEBA00F018EC /* Grid.json */,
 				6BEF34F02306AA2A00F018EC /* ViewController.swift */,
 				6BEF34F22306AA2A00F018EC /* Main.storyboard */,
 				6BEF34F52306AA2D00F018EC /* Assets.xcassets */,
@@ -123,6 +145,43 @@
 				6BEF35102306AA2D00F018EC /* Info.plist */,
 			);
 			path = WordGridUITests;
+			sourceTree = "<group>";
+		};
+		6BEF351C2306AA5C00F018EC /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6BEF352223074BCC00F018EC /* GridViewModel.swift */,
+				6BEF35352309BE5B00F018EC /* GameViewModel.swift */,
+				6BEF35312309AF8800F018EC /* GridModel.swift */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		6BEF351D2306AA8100F018EC /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6BEF352423075E2600F018EC /* CommonUIComponent */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		6BEF351E2306AA9C00F018EC /* PlatformLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6BEF352D2309A8F900F018EC /* NibLoader.swift */,
+				6BEF35332309BA0C00F018EC /* DataOperationHelper.swift */,
+			);
+			path = PlatformLayer;
+			sourceTree = "<group>";
+		};
+		6BEF352423075E2600F018EC /* CommonUIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				6BEF352523075E5300F018EC /* GridView.swift */,
+				6BEF35292309894400F018EC /* GridCell.swift */,
+				6BEF352B2309895700F018EC /* GridCell.xib */,
+			);
+			path = CommonUIComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +291,8 @@
 				6BEF34F92306AA2D00F018EC /* LaunchScreen.storyboard in Resources */,
 				6BEF34F62306AA2D00F018EC /* Assets.xcassets in Resources */,
 				6BEF34F42306AA2A00F018EC /* Main.storyboard in Resources */,
+				6BEF352C2309895700F018EC /* GridCell.xib in Resources */,
+				6BEF35302309AEBA00F018EC /* Grid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +317,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEF35362309BE5B00F018EC /* GameViewModel.swift in Sources */,
+				6BEF352E2309A8F900F018EC /* NibLoader.swift in Sources */,
+				6BEF35322309AF8800F018EC /* GridModel.swift in Sources */,
 				6BEF34F12306AA2A00F018EC /* ViewController.swift in Sources */,
 				6BEF34EF2306AA2A00F018EC /* AppDelegate.swift in Sources */,
+				6BEF352623075E5300F018EC /* GridView.swift in Sources */,
+				6BEF352323074BCC00F018EC /* GridViewModel.swift in Sources */,
+				6BEF352A2309894400F018EC /* GridCell.swift in Sources */,
+				6BEF35342309BA0C00F018EC /* DataOperationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQJK4N3C7M;
 				INFOPLIST_FILE = WordGrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQJK4N3C7M;
 				INFOPLIST_FILE = WordGrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
